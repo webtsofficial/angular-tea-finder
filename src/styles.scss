@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+// Variables
+@import "styles/variables/colors";
+
+// Mixins
+@import "styles/mixins/flex";
+@import "styles/mixins/media_queries";
+@import "styles/mixins/opacity";
+@import "styles/mixins/shadows";
+@import "styles/mixins/transform";
+@import "styles/mixins/transition";
+
+// Reset
+@import "styles/generals/reset";
+
+// imports
+@import "../node_modules/bootstrap/scss/grid";
+
