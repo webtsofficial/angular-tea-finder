@@ -32,6 +32,7 @@
       @include box-shadow(0, 6px, 11px, $color-shadow-mid);
     }
     &:focus {
+      background-color: $color-primary-green-dark;
       border-top: 0.4rem solid $color-primary-green-dark;
       border-bottom: 0.4rem solid $color-primary-green-dark;
     }
@@ -111,17 +112,33 @@
   border-radius: 10px;
 
   &.primary {
-    background-color: $color-accent;
     border: 0.5rem solid $color-primary-green;
     color: $color-primary-green;
+    &:active {
+      border: 0.5rem solid $color-white;
+      color: $color-white;
+    }
     &:hover {
-      background-color: $color-accent-light;
+      border: 0.5rem solid $color-white;
+      color: $color-white;
+    }
+    &:focus {
+      border: 0.5rem solid $color-white;
+      color: $color-white;
     }
   }
   &.accent {
     border: 0.5rem solid $color-accent;
     color: $color-accent;
+    &:active {
+      border: 0.5rem solid $color-accent-very-light;
+      color: $color-accent-very-light;
+    }
     &:hover {
+      border: 0.5rem solid $color-accent-very-light;
+      color: $color-accent-very-light;
+    }
+    &:focus {
       border: 0.5rem solid $color-accent-very-light;
       color: $color-accent-very-light;
     }
