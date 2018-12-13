@@ -3,16 +3,10 @@
 // imports
 
 // Variables
-@import "styles/variables/colors";
-@import "styles/variables/fonts";
+@import "styles/variables/variables";
 
 // Mixins
-@import "styles/mixins/flex";
-@import "styles/mixins/media_queries";
-@import "styles/mixins/opacity";
-@import "styles/mixins/shadows";
-@import "styles/mixins/transform";
-@import "styles/mixins/transition";
+@import "styles/mixins/mixins";
 
 // Reset
 @import "styles/generals/reset";
