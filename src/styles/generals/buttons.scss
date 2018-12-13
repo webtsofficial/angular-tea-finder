@@ -1,0 +1,95 @@
+.btn-raised,
+.btn-flat,
+.btn-outline {
+  cursor: pointer;
+  display: block;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  outline: none;
+  border-radius: 16px;
+  @include transition(all, 0.3s, ease-in-out);
+}
+
+// Raised Button ------------------------------------------------------------------------------------------
+.btn-raised {
+  @include box-shadow(0, 8px, 15px, $color-shadow-mid);
+
+  &.primary {
+    border-top: 0.4rem solid $color-primary-green;
+    border-bottom: 0.4rem solid $color-primary-green-very-dark;
+    background-color: $color-primary-green;
+    color: $color-black;
+
+    &:hover {
+      border-top: 0.4rem solid $color-primary-green-very-dark;
+      border-bottom: 0.4rem solid $color-primary-green;
+      @include box-shadow(0, 6px, 11px, $color-shadow-mid);
+    }
+  }
+  &.accent {
+    background-color: $color-accent-light;
+    color: $color-white;
+    border-top: 0.4rem solid $color-accent-light;
+    border-bottom: 0.4rem solid $color-accent-dark;
+    @include box-shadow(0, 8px, 15px, $color-shadow-dark);
+
+    &:hover {
+      border-top: 0.4rem solid $color-accent-dark;
+      border-bottom: 0.4rem solid $color-accent-light;
+      @include box-shadow(0, 6px, 11px, $color-shadow-dark);
+    }
+  }
+}
+
+// Flat Button ------------------------------------------------------------------------------------------
+.btn-flat {
+
+  &.primary {
+    background-color: $color-primary-green;
+    border-top: 0.4rem solid $color-primary-green;
+    border-bottom: 0.4rem solid $color-primary-green-very-dark;
+    color: $color-black;
+
+    &:hover {
+      border-top: 0.4rem solid $color-primary-green-very-dark;
+      border-bottom: 0.4rem solid $color-primary-green;
+    }
+  }
+  &.accent {
+    background-color: $color-accent-light;
+    border-top: 0.4rem solid $color-accent-light;
+    border-bottom: 0.4rem solid $color-accent-dark;
+    color: $color-white;
+
+    &:hover {
+      border-top: 0.4rem solid $color-accent-dark;
+      border-bottom: 0.4rem solid $color-accent-light;
+    }
+  }
+}
+
+// Outlined Button ------------------------------------------------------------------------------------------
+.btn-outline {
+  padding: 1.45rem 1.95rem;
+  border-radius: 10px;
+
+  &.primary {
+    background-color: $color-accent;
+    border: 0.5rem solid $color-primary-green;
+    color: $color-primary-green;
+    &:hover {
+      background-color: $color-accent-light;
+    }
+  }
+  &.accent {
+    border: 0.5rem solid $color-accent;
+    color: $color-accent;
+    &:hover {
+      border: 0.5rem solid $color-accent-very-light;
+      color: $color-accent-very-light;
+    }
+  }
+}
