@@ -1,3 +1,26 @@
-<p>
-  main-navigation works!
-</p>
+<header>
+    <div class="user-icon">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="logo">
+        <a routerLink="/">
+            <span class="tea">tea</span><i class="fas fa-leaf"></i><span class="finder">finder</span>
+        </a>
+    </div>
+    <div class="menue-icon">
+        <button class="hamburger hamburger--collapse" [class.is-active]="navActive" (click)="toogleNav()" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+    </div>
+</header>
+<nav [class.active]="navActive">
+    <a routerLink="/">
+        <i class="fas fa-home"></i> Home
+    </a>
+    <a routerLink="/teaFinder">
+        <i class="fas fa-leaf"></i> Tea Finder
+    </a>
+</nav>
+

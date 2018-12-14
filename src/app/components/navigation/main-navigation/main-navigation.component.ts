@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-navigation.component.scss']
 })
 export class MainNavigationComponent implements OnInit {
+  navActive = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  toogleNav() {
+    this.navActive = !this.navActive;
+  }
 }
