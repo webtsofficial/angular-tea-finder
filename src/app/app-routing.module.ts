@@ -10,6 +10,14 @@ const routes: Routes = [
   {
     path: 'teaFinder',
     loadChildren: './components/sites/tea-finder/tea-finder.module#TeaFinderModule'
+  },
+  {
+    path: 'data-security',
+    loadChildren: './components/sites/data-security/data-security.module#DataSecurityModule'
+  },
+  {
+    path: 'impress',
+    loadChildren: './components/sites/impress/impress.module#ImpressModule'
   }
 ];
 

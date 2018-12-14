@@ -1,0 +1,23 @@
+@import "../../../../styles/variables/variables";
+@import "../../../../styles/mixins/mixins";
+
+footer {
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(no-wrap);
+  @include justify-content(center);
+  @include align-items(center);
+  background-color: $color-accent;
+
+  a {
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.4rem;
+    color: $color-white;
+    @include transition(color, 0.2s, ease-in-out);
+
+    &:hover {
+      color: $color-primary-green;
+    }
+  }
+}

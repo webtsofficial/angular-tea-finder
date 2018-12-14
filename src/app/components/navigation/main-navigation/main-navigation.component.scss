@@ -10,6 +10,8 @@ header {
   @include flex-direction(row);
   @include justify-content(space-between);
   @include align-items(center);
+  height: 56px;
+  overflow: hidden;
   background-color: $color-accent;
   z-index: 9998;
   @include box-shadow(0, 2px, 4px, $color-shadow-light);
@@ -50,14 +52,15 @@ header {
 nav {
   display: block;
   width: 320px;
-  height: 100%;
-  position: fixed;
-  right: 0;
+  max-height: 100%;
+  min-height: 88vh;
+  position: absolute;
+  right: -320px;
   top: 56px;
   background-color: $color-accent;
   z-index: 9999;
-  @include translateX(320px);
-  @include transition(transform, 0.5s, ease-out);
+  @include translateX(0);
+  @include transition(transform, 0.5s, ease-in-out);
   @include box-shadow(0, 2px, 4px, $color-shadow-light);
 
   a {
@@ -77,6 +80,6 @@ nav {
     }
   }
   &.active {
-    @include translateX(0);
+    @include translateX(-320px);
   }
 }
