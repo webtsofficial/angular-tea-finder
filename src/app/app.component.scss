@@ -5,7 +5,7 @@
   @include flex-direction(column);
   min-height: 100vh;
   width: 100vw;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .content {
   @include flex(1);

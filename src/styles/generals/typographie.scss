@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-noto-serif;
 }
 h1 {
+  padding: 15px 0;
   font-size: 4.5rem;
   font-weight: 700;
 
@@ -22,6 +23,7 @@ h1 {
   }
 }
 h2 {
+  padding: 15px 0;
   font-size: 4rem;
   font-weight: 900;
 
@@ -31,6 +33,7 @@ h2 {
   }
 }
 h3 {
+  padding: 15px 0;
   font-size: 3.2rem;
   font-weight: 900;
 
@@ -40,6 +43,7 @@ h3 {
   }
 }
 h4 {
+  padding: 10px 0;
   font-size: 2.8rem;
   font-weight: 700;
 
@@ -49,6 +53,7 @@ h4 {
   }
 }
 h5 {
+  padding: 10px 0;
   font-size: 2.2rem;
   font-weight: 700;
 
@@ -58,6 +63,7 @@ h5 {
   }
 }
 h6 {
+  padding: 10px 0;
   font-size: 1.6rem;
   font-weight: 700;
 
@@ -71,6 +77,11 @@ h6 {
 a {
   text-decoration: none;
   color: $color-primary-green-dark;
+  @include transition(color, 0.2s, ease-in-out);
+
+  &:hover {
+    color: $color-primary-green-light;
+  }
 }
 
 // Paragraphs, Articles, Abbreviations/ Acronyms, spans
@@ -141,6 +152,27 @@ sup {
 // code
 code {
   font-family: $font-monospace;
+}
+
+// Logo
+.logo {
+  font-family: $font-open-sans;
+  .tea, .finder {
+    color: $color-black;
+    font-weight: 700;
+  }
+  i {
+    display: inline-block;
+    padding: 0 3px;
+    color: $color-primary-green;
+  }
+}
+// Text Tools
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
 
