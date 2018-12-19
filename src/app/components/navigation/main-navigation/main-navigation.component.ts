@@ -7,12 +7,15 @@ import {Subscription} from 'rxjs';
   templateUrl: './main-navigation.component.html',
   styleUrls: ['./main-navigation.component.scss']
 })
-export class MainNavigationComponent implements OnDestroy {
+export class MainNavigationComponent implements OnInit, OnDestroy {
   navActive = false;
   routerSub: Subscription;
 
   constructor(private router: Router) {
     this.routerSub = router.events.subscribe(() => this.closeNav());
+  }
+
+  ngOnInit(): void {
   }
 
   ngOnDestroy(): void {
