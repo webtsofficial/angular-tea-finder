@@ -28,13 +28,24 @@ header {
       padding: 15px;
 
       .tea, .finder {
-        color: $color-white;
         font-weight: 700;
+        color: $color-white;
+        @include transition(color, 0.3s, ease-in-out);
       }
       i {
         display: inline-block;
         padding: 0 3px;
         color: $color-primary-green;
+        @include transition(color, 0.3s, ease-in-out);
+      }
+
+      &:hover {
+        .tea, .finder {
+          color: $color-light-grey;
+        }
+        i {
+          color: $color-primary-green-very-dark;
+        }
       }
     }
   }

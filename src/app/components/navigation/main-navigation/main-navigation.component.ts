@@ -13,7 +13,12 @@ export class MainNavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  toogleNav() {
+  toogleNav(): void {
     this.navActive = !this.navActive;
+  }
+  closeNav(): void {
+    if(this.navActive === true) {
+      this.navActive = false;
+    }
   }
 }

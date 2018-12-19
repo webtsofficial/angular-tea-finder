@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/sites/home/home.component';
 import {MainNavigationComponent} from './components/navigation/main-navigation/main-navigation.component';
 import {FooterComponent} from './components/views/footer/footer.component';
+import {SharedModule} from './shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FooterComponent} from './components/views/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { ImpressRoutingModule } from './impress-routing.module';
 import { ImpressComponent } from './impress.component';
+import {SharedModule} from '../../../shared.module';
 
 @NgModule({
   declarations: [ImpressComponent],
   imports: [
     CommonModule,
-    ImpressRoutingModule
+    ImpressRoutingModule,
+    SharedModule
   ]
 })
 export class ImpressModule { }
