@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-main-navigation',
   templateUrl: './main-navigation.component.html',
   styleUrls: ['./main-navigation.component.scss']
 })
-export class MainNavigationComponent implements OnInit {
+export class MainNavigationComponent implements OnDestroy {
   navActive = false;
+  routerSub: Subscription;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.routerSub = router.events.subscribe(() => this.closeNav());
+  }
 
-  ngOnInit() {
+  ngOnDestroy(): void {
+    this.routerSub.unsubscribe();
   }
 
   toogleNav(): void {
