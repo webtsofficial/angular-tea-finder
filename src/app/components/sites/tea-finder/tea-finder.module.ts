@@ -5,11 +5,13 @@ import { TeaFinderRoutingModule } from './tea-finder-routing.module';
 import { TeaFinderComponent } from './tea-finder.component';
 import {SharedModule} from '../../../shared.module';
 import {CheckboxComponent} from '../../inputs/checkbox/checkbox.component';
+import {IconInputComponent} from '../../inputs/icon-input/icon-input.component';
 
 @NgModule({
   declarations: [
       TeaFinderComponent,
-      CheckboxComponent
+      CheckboxComponent,
+      IconInputComponent
   ],
   imports: [
     CommonModule,
