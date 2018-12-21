@@ -1,0 +1,9 @@
+<section class="checkbox-wrapper" (click)="toggleCheckbox()">
+  <div class="icons">
+    <i class="far fa-check-square" *ngIf="!checked"></i> <!-- unchecked -->
+    <i class="fas fa-check-square" *ngIf="checked"></i> <!-- checked -->
+  </div>
+  <div class="label">
+    {{label}}
+  </div>
+</section>

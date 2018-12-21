@@ -12,4 +12,7 @@ export class TeaFinderComponent implements OnInit {
   ngOnInit() {
   }
 
+  checkboxValueChange(event) {
+    console.log(event);
+  }
 }
