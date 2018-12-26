@@ -7,9 +7,9 @@
   @include flex-wrap(nowrap);
   @include align-items(center);
   max-width: 100%;
-  border: 1px solid $color-accent-very-light;
+  //border: 1px solid $color-accent-very-light;
   border-radius: 100px;
-  @include box-shadow(inset, 0 1px, 8px, $color-shadow-light);
+  @include box-shadow(inset, 0 1px, 8px, $color-shadow-mid);
 
   i, ::ng-deep input {
     display: block;
